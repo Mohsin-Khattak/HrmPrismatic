@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import {
   I18nManager,
   Image,
@@ -14,20 +14,21 @@ import {
 } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { menue } from 'assets/images';
+import {menue} from 'assets/images';
 import DropdownModal from 'components/molecules/modals/dropdown-modal';
-import { colors } from 'config/colors';
-import { mvs } from 'config/metrices';
-import { useAppSelector } from 'hooks/use-store';
-import { t } from 'i18next';
+import {colors} from 'config/colors';
+import {mvs} from 'config/metrices';
+import {useAppSelector} from 'hooks/use-store';
+import {t} from 'i18next';
 import moment from 'moment';
 import PhoneInput from 'react-native-phone-number-input';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Medium from 'typography/medium-text';
 import Regular from 'typography/regular-text';
-import { DatePicker } from '../date-picker';
-import { Row } from '../row';
+import {DatePicker} from '../date-picker';
+import {Row} from '../row';
 type props = {
   isRequired?: boolean;
   onChangeText: (text: string) => void;
@@ -36,6 +37,7 @@ type props = {
   onPressIn?: () => void;
   getCallingCode?: (text: string) => void | undefined;
   value?: string;
+
   label?: string;
   items?: any[];
   placeholder?: string;
@@ -49,12 +51,13 @@ type props = {
   defaultCode?: 'PK';
   layout?: 'first';
   isPassword?: boolean;
+  isEmail?: boolean;
   isCalendar?: boolean;
-  isClock?:boolean;
+  isClock?: boolean;
   editable?: boolean;
   disabledSearch?: boolean;
   error?: string;
-  minmumDate?:Date;
+  minmumDate?: Date;
   id?: any;
   mtop?: number;
   mode?: 'date' | 'time';
@@ -145,6 +148,7 @@ const PrimaryInput = (props: props) => {
     isPassword,
     isCalendar,
     isClock,
+    isEmail,
     keyboardType,
     error,
     mainContainer,
@@ -155,22 +159,19 @@ const PrimaryInput = (props: props) => {
     // mode,
     minmumDate,
   } = props;
-  const {mode}=props;
+  const {mode} = props;
 
-  
   const showDatePicker = () => {
     setDatePickerVisible(true);
   };
   const hideDatePicker = () => {
-   setDatePickerVisible(false) // Call onCancel when the modal is canceled
+    setDatePickerVisible(false); // Call onCancel when the modal is canceled
   };
   const handleConfirm = (date: Date) => {
-    if(mode === 'datetime'){
-
+    if (mode === 'datetime') {
       onChangeText(moment(date).format('YYYY-MM-DD HH:mm'));
-    }else{
+    } else {
       onChangeText(moment(date).format('YYYY-MM-DD'));
-
     }
     hideDatePicker();
   };
@@ -178,13 +179,13 @@ const PrimaryInput = (props: props) => {
     setTimePickerVisible(true);
   };
   const hideTimePicker = () => {
-   setTimePickerVisible(false) // Call onCancel when the modal is canceled
+    setTimePickerVisible(false); // Call onCancel when the modal is canceled
   };
   const handleTimeConfirm = () => {
-    const currentTime = moment().format('hh:mm:ss A');    
+    const currentTime = moment().format('hh:mm:ss A');
     onChangeText(currentTime);
     hideTimePicker();
-};
+  };
 
   return (
     <View style={[mainContainer]}>
@@ -210,6 +211,14 @@ const PrimaryInput = (props: props) => {
             {textAlign: I18nManager.isRTL ? 'right' : 'left'},
           ]}
         />
+        {isEmail && (
+          <Fontisto
+            style={styles.PasswordIcon}
+            size={25}
+            name={'email'}
+            color={colors.placeholder}
+          />
+        )}
         {isPassword && (
           <TouchableOpacity
             style={styles.PasswordIcon}
@@ -217,44 +226,41 @@ const PrimaryInput = (props: props) => {
             <Feather
               size={25}
               name={secure ? 'eye' : 'eye-off'}
-              color={colors.black}
+              color={colors.placeholder}
             />
           </TouchableOpacity>
         )}
         {isCalendar && (
           <TouchableOpacity
-          onPress={showDatePicker}
-            style={styles.PasswordIcon}
-          >
+            onPress={showDatePicker}
+            style={styles.PasswordIcon}>
             <FontAwesome size={20} name={'calendar'} color={colors.primary} />
           </TouchableOpacity>
         )}
         {isClock && (
           <TouchableOpacity
-          onPress={showTimePicker}
-            style={styles.PasswordIcon}
-          >
+            onPress={showTimePicker}
+            style={styles.PasswordIcon}>
             <AntDesign size={20} name={'clockcircleo'} color={colors.primary} />
           </TouchableOpacity>
         )}
       </View>
       <DatePicker
-      minimumDate={minmumDate}
-      mode={mode}
-      onConfirm={handleConfirm}
+        minimumDate={minmumDate}
+        mode={mode}
+        onConfirm={handleConfirm}
         isVisible={isDatePickerVisible}
-        onChangeText={(str) => {
+        onChangeText={str => {
           setDatePickerVisible(false);
           onChangeText(str);
         }}
         onCancel={hideDatePicker}
       />
       <DatePicker
-
-      mode={mode}
-      onConfirm={handleTimeConfirm}
+        mode={mode}
+        onConfirm={handleTimeConfirm}
         isVisible={isTimePickerVisible}
-        onChangeText={(str) => {
+        onChangeText={str => {
           setTimePickerVisible(false);
           onChangeText(str);
         }}
@@ -264,7 +270,6 @@ const PrimaryInput = (props: props) => {
         label={error ? error : ''}
         style={[styles.errorLabel, errorStyle]}
       />
-
     </View>
   );
 };
@@ -370,7 +375,7 @@ export const TextAreaInput = (props: props) => {
         )}
       </View>
       <Regular
-      numberOfLines={2}
+        numberOfLines={2}
         label={error ? error : ''}
         style={[styles.errorLabel, errorStyle]}
       />
@@ -445,11 +450,16 @@ export const InputWithIcon = (props: props) => {
           onBlur();
         }}
         style={[styles.dropDownContainer, containerStyle]}>
-        <Medium color={colors.primary} label={items?.find(x => x?.id == id)?.vehicle_type || ''} />
-        <Entypo size={25} 
-         style={{transform: [{rotate: visible ? '90deg' : '0deg'}]}}
-         
-         name={'chevron-small-right'} color={colors.black} />
+        <Medium
+          color={colors.primary}
+          label={items?.find(x => x?.id == id)?.vehicle_type || ''}
+        />
+        <Entypo
+          size={25}
+          style={{transform: [{rotate: visible ? '90deg' : '0deg'}]}}
+          name={'chevron-small-right'}
+          color={colors.black}
+        />
       </TouchableOpacity>
       <Regular label={error ? `${t(error)}` : ''} style={styles.errorLabel} />
       <DropdownModal
@@ -598,8 +608,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: mvs(10),
     backgroundColor: colors.secondary,
-    borderColor:colors.primary,
-    borderWidth:mvs(1)
+    borderColor: colors.primary,
+    borderWidth: mvs(1),
   },
   phoneContainer: {
     width: '100%',

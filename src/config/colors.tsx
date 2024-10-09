@@ -5,6 +5,8 @@ export const colors = {
   placeholder: '#434343',
   white: '#FFFFFF',
   primary: '#175884',
+  secondary: '#434343', //'#F2F2F2',
+
   lightGray: '#FFFFFFB2',
   border: '#DBDBDB',
   black: '#000000',
@@ -21,7 +23,6 @@ export const colors = {
   transparent: 'transparent',
   yellow: '#ffd79c',
   blueHalf: 'rgba(2,59,150,0.23)',
-  secondary: '#f3f3f3', //'#F2F2F2',
   shadow: {
     shadowColor: '#000',
     shadowOffset: {
