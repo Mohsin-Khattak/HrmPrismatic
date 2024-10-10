@@ -7,36 +7,26 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  body: {
-    flex: 1,
-  },
-  lan: {
-    height: mvs(120),
-    marginTop: mvs(20),
-    backgroundColor: colors.primary,
-  },
-  btnText: {
-    fontSize: mvs(24),
-  },
-  heading: {
-    fontSize: mvs(20),
-    color: colors.primary,
-  },
-  normaltext: {
-    fontSize: mvs(14),
-    paddingVertical: mvs(4),
-  },
 
-  contentContainerStyle: {
-    flexGrow: 1,
-    paddingHorizontal: mvs(16),
-    paddingVertical: mvs(20),
-    // paddingBottom: mvs(100),
-    // margi
-  },
   backgroundimg: {
     width: '100%',
-    height: '100%',
+    height: mvs(250),
+  },
+  infoContainer: {
+    width: '100%',
+    padding: mvs(20),
+    backgroundColor: colors.silver,
+
+    borderRadius: mvs(10),
+  },
+  timeContainer: {
+    justifyContent: 'flex-start',
+    gap: mvs(15),
+    marginTop: mvs(10),
+    alignItems: 'center',
+  },
+  checkBtn: {
+    width: '45%',
   },
 });
 export default styles;

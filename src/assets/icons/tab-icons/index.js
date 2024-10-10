@@ -20,3 +20,8 @@ export {default as Vehicle} from './vehicle.svg';
 export {default as VehicleActive} from './vehicle-active.svg';
 export {default as Message} from './message.svg';
 export {default as MessageActive} from './message-active.svg';
+
+//////////////////hrm app icons//////////////////////
+
+export {default as MenuIcon} from '../hrm-icons/menu.svg';
+export {default as LogoutIcon} from '../hrm-icons/logout.svg';

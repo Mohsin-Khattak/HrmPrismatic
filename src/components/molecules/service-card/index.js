@@ -1,16 +1,11 @@
 import * as IMG from 'assets/images';
 import React from 'react';
-import {
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import i18n from 'translation';
 import Medium from 'typography/medium-text';
 import Regular from 'typography/regular-text';
-import { colors } from '../../../config/colors';
-import { mvs } from '../../../config/metrices';
+import {colors} from '../../../config/colors';
+import {mvs} from '../../../config/metrices';
 
 const ServiceCard = ({
   item,
@@ -42,7 +37,7 @@ const ServiceCard = ({
             resizeMode="cover"
             style={{height: mvs(36), width: mvs(36)}}
           />
-          {/* <Icon height={mvs(36)} width={mvs(36)} /> */}
+
           <View style={{flex: 1}}>
             <Medium
               label={item?.title}
@@ -58,9 +53,7 @@ const ServiceCard = ({
             />
           </View>
         </View>
-        {/* </LinearGradient> */}
       </View>
-      {/* </ImageBackground> */}
     </TouchableOpacity>
   );
 };
@@ -71,10 +64,6 @@ const styles = StyleSheet.create({
     width: '45%',
     borderRadius: mvs(15),
     marginBottom: mvs(20),
-    // backgroundColor: colors.homecard2,
-    // backgroundColor: index % 2 === 0 ? colors.homecard1 : colors.homecard2,
-
-    // ...colors.shadow,
   },
   row: {alignItems: 'flex-end'},
   bg: {
@@ -91,21 +80,4 @@ const styles = StyleSheet.create({
   },
   btnTxt: {color: colors.primary, fontSize: mvs(12), lineHeight: mvs(16)},
   imgStyle: {borderRadius: mvs(15)},
-
-  grd: {
-    height: '100%',
-    padding: mvs(15),
-    borderRadius: mvs(15),
-  },
-  heartContainer: {
-    position: 'absolute',
-    right: mvs(20),
-    top: mvs(-13),
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: mvs(30),
-    width: mvs(30),
-    borderRadius: mvs(15),
-    backgroundColor: colors.red,
-  },
 });

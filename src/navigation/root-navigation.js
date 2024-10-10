@@ -39,11 +39,11 @@ export const RootNavigator = () => {
       <SafeAreaView style={{flex: 0, backgroundColor: colors.primary}} />
       <StatusBar
         translucent={false}
-        backgroundColor={colors.white}
-        barStyle={'dark-content'}
+        backgroundColor={colors.primary}
+        barStyle={'white'}
       />
       <Stack.Navigator
-        initialRouteName="Splash"
+        initialRouteName="Drawer"
         screenOptions={horizontalAnimation}>
         <Stack.Group>
           <Stack.Screen name="Splash" component={Splash} />

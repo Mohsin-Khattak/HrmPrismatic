@@ -71,3 +71,5 @@ export {default as splashbackgroundimg} from './hrmimages/splashbackground.png';
 export {default as appiconimg} from './hrmimages/appicon.png';
 export {default as loginbackgroundimg} from './hrmimages/loginbackground.png';
 export {default as forgotbackgroundimg} from './hrmimages/forgotbackground.png';
+export {default as homebackgroundimg} from './hrmimages/homebackground.png';
+export {default as userimg} from './hrmimages/user.png';

@@ -23,7 +23,7 @@ const HeaderX = ({
   ...props
 }) => {
   const navigation = useNavigation();
-  const [isOnline, setIsOnline] = React.useState(true);
+
   const user = useAppSelector(s => s?.user);
   const userInfo = user?.userInfo;
   return (
@@ -35,24 +35,6 @@ const HeaderX = ({
             size={mvs(30)}
             color={colors.white}
           />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigate('Notifications')}>
-          <Ionicons
-            name={'notifications'}
-            size={mvs(25)}
-            color={colors.white}
-          />
-
-          {userInfo?.id && unreadNotification > 0 && (
-            <View style={styles.notificationContainer}>
-              <Regular
-                color={colors.black}
-                fontSize={mvs(10)}
-                label={unreadNotification}
-              />
-            </View>
-          )}
         </TouchableOpacity>
       </Row>
       {isSearch && (
