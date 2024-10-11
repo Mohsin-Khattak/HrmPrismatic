@@ -43,7 +43,7 @@ export const RootNavigator = () => {
         barStyle={'white'}
       />
       <Stack.Navigator
-        initialRouteName="Drawer"
+        initialRouteName="EditProfileScreen"
         screenOptions={horizontalAnimation}>
         <Stack.Group>
           <Stack.Screen name="Splash" component={Splash} />

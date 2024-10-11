@@ -103,8 +103,8 @@ export const updatePasswordValidation = yup.object().shape({
 // });
 
 export const updateProfileFormValidation = yup.object().shape({
-  first_name: yup.string().required('req_name'),
-
+  firstname: yup.string().required('req_name'),
+  email: yup.string().email('invalid_email').required('req_email'),
   phone: yup
     .string()
     .test('is-ten-digits', 'Phone must be exactly 10 digits', (value: any) => {
@@ -112,6 +112,8 @@ export const updateProfileFormValidation = yup.object().shape({
       return value.length <= 15 && !isNaN(value); // Check for 10 digits and numeric characters
     })
     .required('Phone is required'),
+    password: yup.string().required('req_pass').min(8, 'weak_pass'),
+
 });
 export const updatePasswordFormValidation = yup.object().shape({
   password: yup.string().required('req_pass').min(8, 'weak_pass'),

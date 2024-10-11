@@ -7,140 +7,83 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  body: {
-    flex: 1,
-    paddingHorizontal: mvs(10),
-    paddingVertical: mvs(20),
-  },
-  lan: {
-    height: mvs(120),
-    marginTop: mvs(20),
-    backgroundColor: colors.primary,
-  },
-  btnText: {
-    fontSize: mvs(24),
-  },
-  heading: {
-    fontSize: mvs(20),
-    color: colors.primary,
-  },
-  normaltext: {
-    fontSize: mvs(14),
-    paddingVertical: mvs(4),
+  topcontainer:{
+    width:'100%',
+    height:mvs(150),
+    backgroundColor:colors.primary,
   },
 
-  searchContainer: {
-    marginVertical: mvs(10),
-    // width: '90%',
-    alignSelf: 'center',
-  },
-  logobackground: {
-    height: mvs(110),
-    width: width,
-    // position: 'absolute',
-  },
-  contentContainerStyle: {
-    // flex: 1,
-    paddingTop: mvs(20),
-    // height: height - 400,
-    flex: 1,
-    // borderWidth: 1,
-    // paddingBottom: mvs(200),
-    // paddingHorizontal: mvs(20),
-  },
-  contentContainerStyleFlatlist: {
-    // paddingVertical: mvs(5),
-    // paddingHorizontal: mvs(20),
-    // paddingBottom: mvs(100),
-  },
-  columnWrapperStyle: {
-    justifyContent: 'space-between',
-  },
-  rendercontainer: {
-    padding: mvs(10),
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: colors.border,
-    backgroundColor: colors.white,
-    borderRadius: mvs(10),
-  },
-  notificationicon: {
-    width: mvs(35),
-    height: mvs(35),
-    resizeMode: 'contain',
-  },
-  titleandtextview: {
-    flex: 1,
-    paddingHorizontal: mvs(5),
-  },
-  acceptbutton: {
-    backgroundColor: colors.white,
-    // marginTop: mvs(5),
-    borderRadius: mvs(10),
-    // width: '45%',
-  },
-  rejectbutton: {
-    backgroundColor: colors.white,
-    // marginTop: mvs(20),
-    borderRadius: mvs(10),
-    width: '45%',
-  },
-  logobackground: {
-    height: mvs(110),
-    width: width,
-    // position: 'absolute',
-  },
-  contentContainerStyleNew: {
-    paddingHorizontal: mvs(20),
-    marginVertical: mvs(10),
-    paddingVertical: mvs(20),
-    marginHorizontal: mvs(20),
-    backgroundColor: colors.white,
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
-    borderRadius: mvs(6),
-  },
-  keyboardcontentcontainer: {
-    paddingHorizontal: mvs(0),
-    paddingBottom: mvs(20),
-  },
   img: {
-    height: mvs(100),
-    width: mvs(100),
+    height: mvs(120),
+    width: mvs(120),
     borderRadius: mvs(50),
-    borderWidth: mvs(3),
-    borderColor: colors.primary,
-    backgroundColor: colors.transparent,
-    justifyContent: 'center',
+    // borderWidth: mvs(3),
+    // borderColor: colors.primary,
+    position:'absolute',
+    bottom:mvs(-50),
+    // justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
   },
-  name: {
-    alignSelf: 'center',
-    fontSize: mvs(24),
-    marginTop: mvs(10),
-    // color: colors.white,
-  },
-  email: {
-    alignSelf: 'center',
-    fontSize: mvs(14),
-    // color: `${colors.white}`,
-    color: colors.black,
-  },
+
   imgUpload: {
     height: '100%',
     width: '100%',
     borderRadius: mvs(50),
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // alignSelf: 'center',
+  },
+  inputcontainer:{
+    marginTop:mvs(120),
+    // padding:mvs(20)
+  },
+  name: {
+    alignSelf: 'center',
+    fontSize: mvs(24),
+    // marginTop: mvs(10),
+    position:'absolute',
+    bottom:mvs(-95),
     alignItems: 'center',
     alignSelf: 'center',
+    // color: colors.white,
   },
+  textinput:{
+    // widht:'90%',
+    // alignSelf:'center',
+    borderColor:colors.gray87,
+  },
+  containerStyle:{
+    height:mvs(50),
+  },
+  containerStyle2:{
+    height:mvs(50),
+    backgroundColor:colors.white,
+    borderColor:colors.yellow,
+    borderWidth:mvs(2),
+    borderRadius:mvs(27)
+
+  },
+  textStyle:{
+    color:colors.primary,
+    fontSize:mvs(16),
+  },
+  editbtn :{
+    
+      backgroundColor: colors.lightsilver,
+      width:'25%',
+      height: mvs(30),
+      borderRadius:mvs(30),
+      // borderWidth:mvs(1),
+      borderRadius: mvs(10),
+      position: 'absolute',
+      right: mvs(8),
+      bottom: mvs(10),
+
+      alignSelf: 'center',
+      alignItems: 'center',
+      justifyContent: 'center',
+    
+  }
 });
 export default styles;
