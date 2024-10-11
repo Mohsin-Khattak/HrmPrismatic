@@ -7,8 +7,9 @@ export const colors = {
   primary: '#175884',
   secondary: '#434343', //'#F2F2F2',
   silver: '#EEEEEE',
+  lightsilver: '#D9D9D9',
   blur: '#BEBEBE',
-
+gray87:'#DEDEDE',
   lightGray: '#FFFFFFB2',
   border: '#DBDBDB',
   black: '#000000',

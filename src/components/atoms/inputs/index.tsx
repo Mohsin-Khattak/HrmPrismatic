@@ -29,6 +29,7 @@ import Medium from 'typography/medium-text';
 import Regular from 'typography/regular-text';
 import {DatePicker} from '../date-picker';
 import {Row} from '../row';
+import Icon from 'react-native-vector-icons/FontAwesome';
 type props = {
   isRequired?: boolean;
   onChangeText: (text: string) => void;
@@ -61,6 +62,7 @@ type props = {
   id?: any;
   mtop?: number;
   mode?: 'date' | 'time';
+  editIcons?: boolean;
   keyboardType?: KeyboardTypeOptions | undefined;
   onBlur?: (e?: NativeSyntheticEvent<TextInputFocusEventData>) => void;
 };
@@ -153,6 +155,7 @@ const PrimaryInput = (props: props) => {
     error,
     mainContainer,
     editable = true,
+    editIcons = false,
     onBlur = () => {},
     onPressIn = () => {},
     isRequired = false,
@@ -216,7 +219,7 @@ const PrimaryInput = (props: props) => {
             style={styles.PasswordIcon}
             size={25}
             name={'email'}
-            color={colors.placeholder}
+            color={colors.primary}
           />
         )}
         {isPassword && (
@@ -226,7 +229,7 @@ const PrimaryInput = (props: props) => {
             <Feather
               size={25}
               name={secure ? 'eye' : 'eye-off'}
-              color={colors.placeholder}
+              color={colors.primary}
             />
           </TouchableOpacity>
         )}
@@ -243,6 +246,16 @@ const PrimaryInput = (props: props) => {
             style={styles.PasswordIcon}>
             <AntDesign size={20} name={'clockcircleo'} color={colors.primary} />
           </TouchableOpacity>
+        )}
+        {editIcons && (
+            <FontAwesome
+            style={styles.PasswordIcon}
+
+              name={'edit'}
+              size={24}
+              color={colors.primary}
+              // style={styles.icon}
+            />
         )}
       </View>
       <DatePicker

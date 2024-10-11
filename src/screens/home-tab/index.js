@@ -41,10 +41,10 @@ const HomeTab = props => {
   const datshow = [
     {title: '2323'},
     {title: 'sdgds'},
-    {title: '2323'},
-    {title: 'sdgds'},
-    {title: '2323'},
-    {title: 'sdgds'},
+    // {title: '2323'},
+    // {title: 'sdgds'},
+    // {title: '2323'},
+    // {title: 'sdgds'},
   ];
   const [order, setOrder] = React.useState([]);
   const getList = async () => {
@@ -173,10 +173,12 @@ const HomeTab = props => {
               <Bargraph />
               <View
                 style={{
+                  width:'90%',
                   flexDirection: 'row',
                   flexWrap: 'wrap',
-                  justifyContent: 'space-between',
+                  // justifyContent: 'space-between',
                   marginTop: mvs(20),
+                  // backgroundColor:'red',
                 }}>
                 {datshow.map((item, index) => {
                   return (

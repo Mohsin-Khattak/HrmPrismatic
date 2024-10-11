@@ -6,7 +6,6 @@ const screenWidth = Dimensions.get('window').width;
 
 const BarGraph = () => {
   return (
-    <View>
       <BarChart
         data={{
           labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
@@ -43,7 +42,6 @@ const BarGraph = () => {
         }}
         verticalLabelRotation={0} // No rotation for labels
       />
-    </View>
   );
 };
 
