@@ -31,11 +31,9 @@ const ServiceCard = ({
             padding: mvs(10),
           }}>
           <Image
-            source={
-              item?.icon ? {uri: `${item?.icon}`} : IMG.serviceAntiqueicon
-            }
+            source={item?.image}
             resizeMode="cover"
-            style={{height: mvs(36), width: mvs(36)}}
+            style={{marginTop: mvs(10)}}
           />
 
           <View style={{flex: 1}}>
@@ -44,7 +42,7 @@ const ServiceCard = ({
               numberOfLines={2}
               color={colors.primary}
               fontSize={mvs(14)}
-              style={{marginTop: mvs(5), textAlign: 'center'}}
+              style={{marginTop: mvs(10), textAlign: 'center'}}
             />
             <Regular
               label={item?.desc}

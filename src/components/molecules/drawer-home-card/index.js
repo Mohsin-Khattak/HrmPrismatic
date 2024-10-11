@@ -26,7 +26,7 @@ const DrawerHomeCard = ({
             borderRadius: mvs(br),
           },
         ]}>
-        <Row>
+        <Row style={{alignItems: 'center'}}>
           {icon1 && (
             <Image source={icon1} style={styles.img} resizeMode="contain" />
           )}
@@ -64,13 +64,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  img: {height: mvs(25), width: mvs(25), marginRight: mvs(16)},
+  img: {height: mvs(35), width: mvs(35), marginRight: mvs(16)},
   homeContainer: {
     backgroundColor: colors.white,
     height: mvs(48),
     width: width - 100,
-    marginHorizontal: mvs(17),
-    paddingHorizontal: mvs(17.5),
+    // marginHorizontal: mvs(17),
+    paddingHorizontal: mvs(10),
 
     alignItems: 'center',
     marginBottom: mvs(30),

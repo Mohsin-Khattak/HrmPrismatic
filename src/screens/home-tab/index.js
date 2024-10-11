@@ -25,6 +25,7 @@ import Bold from 'typography/bold-text';
 import moment from 'moment';
 import {PrimaryButton} from 'components/atoms/buttons';
 import Bargraph from 'components/atoms/graph/bargraph';
+import {HomeList} from 'config/constants';
 const HomeTab = props => {
   const user = useAppSelector(s => s?.user);
   const [select, setSelect] = useState('checkin');
@@ -178,7 +179,7 @@ const HomeTab = props => {
                   justifyContent: 'space-between',
                   marginTop: mvs(20),
                 }}>
-                {datshow.map((item, index) => {
+                {HomeList.map((item, index) => {
                   return (
                     <ServiceCard
                       backgroundColor={

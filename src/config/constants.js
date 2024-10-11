@@ -34,36 +34,30 @@ export const weekDays = [
   'Sunday',
 ];
 
-export const SLIDES_LIST = [
+export const HomeList = [
   {
-    image: 'https://getmovers.co.uk/static/media/s1.f9907177.jpg',
-    title: 'quick_search',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.fingerprintimg,
+    title: 'Attendance',
   },
   {
-    image: 'https://getmovers.co.uk/static/media/5.29deee86.png',
-    title: 'fast_shipping',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.leaveimg,
+    title: 'Leave Request',
   },
   {
-    image: 'https://getmovers.co.uk/static/media/6.58041a1b.png',
-    title: 'free_rides',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.taskmangerimg,
+    title: 'Task Manager',
   },
   {
-    image: 'https://getmovers.co.uk/static/media/7.fe4e3dab.png',
-    title: 'free_rides',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.payrollimg,
+    title: 'Payroll',
   },
   {
-    image: 'https://getmovers.co.uk/static/media/8.a16c3c07.png',
-    title: 'free_rides',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.notificationimg,
+    title: 'Notifications',
   },
   {
-    image: 'https://getmovers.co.uk/static/media/9.0ec25ad3.png',
-    title: 'free_rides',
-    desc: 'Move Anything to Anywhere… at the cheapest rates!! Start your moving journey now with the United Kingdoms most convenient transport and removal agency.',
+    image: IMG.companycalendarimg,
+    title: 'Company Calendar',
   },
 ];
 export const ONBOARDING_LIST = [
@@ -433,4 +427,3 @@ export const ADVICE_FROM_US_LIST = [
     desc: 'Moving firearms presents not only safety but also legal concerns during a move. When moving, guns should be packed into safety cases that are appropriately labelled. Furthermore, all movers (or participants if it’s a DIY move) should be informed beforehand about the presence of the firearms to be relocated.The removal and storage of firearms can also be deemed illegal under certain circumstances. When planning a move, be sure to educate yourself on the gun safety and relocation laws of the intended location before making a move.',
   },
 ];
-

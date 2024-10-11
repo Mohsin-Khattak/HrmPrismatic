@@ -10,7 +10,6 @@ import FurnitureItemsScreen from 'screens/furniture-items';
 import HelpUs from 'screens/help-us';
 import InboxScreen from 'screens/inbox-screen';
 import LanguageScreen from 'screens/language-screen';
-import LocationSetup from 'screens/location-setup';
 import LoginScreen from 'screens/login-screen';
 import {
   default as MessageHomeScreen,
@@ -31,6 +30,7 @@ import Tracking from 'screens/tracking';
 import WhereToMoveScreen from 'screens/where-to-move';
 import {horizontalAnimation} from '../utils';
 import DrawerNavigation from './drawer-navigation/drawer-navigation';
+import SelfServicePortal from 'screens/self-service-portal';
 const Stack = createNativeStackNavigator();
 
 export const RootNavigator = () => {
@@ -65,6 +65,10 @@ export const RootNavigator = () => {
           />
           <Stack.Screen name="TotalOrderScreen" component={TotalOrderScreen} />
           <Stack.Screen name="InboxScreen" component={InboxScreen} />
+          <Stack.Screen
+            name="SelfServicePortal"
+            component={SelfServicePortal}
+          />
           <Stack.Screen
             name="TermsandConditionsScreen"
             component={TermsandConditionsScreen}
@@ -103,9 +107,7 @@ export const RootNavigator = () => {
           />
         </Stack.Group>
 
-        <Stack.Group>
-          <Stack.Screen name="LocationSetup" component={LocationSetup} />
-        </Stack.Group>
+        <Stack.Group></Stack.Group>
         <Stack.Screen name="Drawer" component={DrawerNavigation} />
         <Stack.Screen name="HelpUs" component={HelpUs} />
         <Stack.Screen name="Tracking" component={Tracking} />

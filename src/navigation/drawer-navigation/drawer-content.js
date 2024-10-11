@@ -29,7 +29,7 @@ const CustomDrawerContent = props => {
         <Medium
           label={userInfo?.name || 'Guest Mode'}
           fontSize={mvs(18)}
-          color={colors.black}
+          color={colors.white}
           style={{marginTop: mvs(6)}}
         />
         {/* <Medium
@@ -42,59 +42,42 @@ const CustomDrawerContent = props => {
       <ScrollView style={styles.scrololstyle}>
         <DrawerHomeCard
           onPress={() => navigate('Me')}
-          icon1={IMG.userDarwer}
-          label1={t('my_profile')}
+          icon1={IMG.draweruserimg}
+          label1={'Employee Engagement'}
           containerStyle={styles.helpStyle}
         />
-        {/* <DrawerHomeCard
-          onPress={() => navigate('ManageVehicleScreen')}
-          icon1={IMG.manageVehicleDrawer}
-          label1={t('manage_vehicle')}
-          br={8}
-          containerStyle={styles.helpStyle}
-        /> */}
 
         <DrawerHomeCard
-          onPress={() => navigate('MessageHomeScreen')}
-          icon1={IMG.documentDrawer}
-          label1={t('chat_screen')}
-          // br={8}
+          onPress={() => navigate('SelfServicePortal')}
+          icon1={IMG.drawerselfserviceimg}
+          label1={'Self-Service Portal'}
           containerStyle={styles.helpStyle}
         />
         <DrawerHomeCard
           onPress={() => navigate('EditProfileScreen')}
-          icon1={IMG.editprofileimg}
-          label1={t('edit_profile')}
+          icon1={IMG.drawertaskmanagmentimg}
+          label1={'Task Management'}
           containerStyle={styles.helpStyle}
         />
         <DrawerHomeCard
           onPress={() => navigate('HelpUs')}
-          icon1={IMG.help}
-          label1={t('Help Us')}
+          icon1={IMG.drawertrainingimg}
+          label1={'Training And Development'}
           containerStyle={styles.helpStyle}
         />
-        {/* <DrawerHomeCard
-          onPress={() => navigate('WhereToMoveScreen')}
-          icon1={IMG.settings}
-          label1={t('where_to_move')}
-          containerStyle={styles.helpStyle}
-        /> */}
       </ScrollView>
 
-      {userInfo && (
-        <DrawerHomeCard
-          // onPress={() => props?.navigation?.toggleDrawer()}
-          onPress={() =>
-            userInfo
-              ? dispatch(onLogoutPress())
-              : props?.navigation?.navigate('Login')
-          }
-          icon1={IMG.drawerLogoutIcon}
-          label1={t('logout')}
-          br={8}
-          containerStyle={styles.helpStyle}
-        />
-      )}
+      <DrawerHomeCard
+        onPress={() =>
+          userInfo
+            ? dispatch(onLogoutPress())
+            : props?.navigation?.navigate('Login')
+        }
+        icon1={IMG.drawerLogoutIcon}
+        label1={t('logout')}
+        br={8}
+        containerStyle={styles.helpStyle}
+      />
     </View>
   );
 };
@@ -105,17 +88,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   header: {
-    height: mvs(260),
+    height: mvs(240),
     width: width - 60,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomWidth: mvs(1),
+    backgroundColor: colors.primary,
     borderColor: colors.border,
-    // backgroundColor: colors.primary,
   },
   needHelpContainer: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.primary,
     width: width - 100,
     marginHorizontal: mvs(17),
     borderRadius: mvs(8),
@@ -151,8 +134,8 @@ const styles = StyleSheet.create({
   },
   scrololstyle: {
     flexGrow: 1,
-    paddingVertical: mvs(10),
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
+    marginTop: mvs(50),
   },
 });

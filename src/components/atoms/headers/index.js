@@ -13,7 +13,6 @@ import {Row} from '../row';
 import {LogoutIcon, MenuIcon} from 'assets/icons/tab-icons';
 import {useNavigation} from '@react-navigation/native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
 const AppHeader = ({
   style,
   title,
@@ -27,7 +26,7 @@ const AppHeader = ({
     <View style={[styles.container, style]}>
       <Row style={{alignItems: 'center'}}>
         <Bold label={title} style={styles.title} />
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPress={() => navigation?.toggleDrawer()}>
           <MenuIcon />
         </TouchableOpacity>
       </Row>

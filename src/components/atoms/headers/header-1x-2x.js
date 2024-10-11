@@ -32,10 +32,9 @@ const HeaderX = ({
     <View style={[styles.container, style]}>
       <Row style={{alignItems: 'center'}}>
         {back ? (
-          <TouchableOpacity
-            onPress={() => navigation?.goBack()}>
+          <TouchableOpacity onPress={() => navigation?.goBack()}>
             <Icon
-              name={I18nManager.isRTL ? 'arrowright' : 'arrowleft'}
+              name={I18nManager.isRTL ? 'right' : 'left'}
               size={mvs(20)}
               color={colors.white}
             />
