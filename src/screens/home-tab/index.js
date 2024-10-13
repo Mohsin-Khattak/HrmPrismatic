@@ -26,6 +26,7 @@ import moment from 'moment';
 import {PrimaryButton} from 'components/atoms/buttons';
 import Bargraph from 'components/atoms/graph/bargraph';
 import {HomeList} from 'config/constants';
+import {navigate} from 'navigation/navigation-ref';
 const HomeTab = props => {
   const user = useAppSelector(s => s?.user);
   const [select, setSelect] = useState('checkin');
@@ -42,10 +43,10 @@ const HomeTab = props => {
   const datshow = [
     {title: '2323'},
     {title: 'sdgds'},
-    // {title: '2323'},
-    // {title: 'sdgds'},
-    // {title: '2323'},
-    // {title: 'sdgds'},
+    {title: '2323'},
+    {title: 'sdgds'},
+    {title: '2323'},
+    {title: 'sdgds'},
   ];
   const [order, setOrder] = React.useState([]);
   const getList = async () => {
@@ -174,16 +175,16 @@ const HomeTab = props => {
               <Bargraph />
               <View
                 style={{
-                  width:'90%',
                   flexDirection: 'row',
                   flexWrap: 'wrap',
-                  // justifyContent: 'space-between',
+                  justifyContent: 'space-between',
                   marginTop: mvs(20),
-                  // backgroundColor:'red',
                 }}>
                 {HomeList.map((item, index) => {
                   return (
                     <ServiceCard
+                      onPress={() => navigate(item?.moveTo)}
+                      key={item?.id || index}
                       backgroundColor={
                         index % 4 === 0 || index % 4 === 3
                           ? colors.homecard2

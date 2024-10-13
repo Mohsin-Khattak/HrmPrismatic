@@ -1,99 +1,76 @@
-import { StyleSheet } from 'react-native';
-import { mvs, width } from 'config/metrices';
-import { colors } from 'config/colors';
+import {mvs, width} from 'config/metrices';
+import {StyleSheet} from 'react-native';
+import {colors} from 'config/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.white,
+  },
+  topcontainer: {
+    width: '100%',
+    height: '19%',
     backgroundColor: colors.primary,
   },
-  contentContainerStyle: {
-    flex: 1,
-    padding: mvs(20),
-  },
-  body: {
-    flex: 1,
-    paddingHorizontal: mvs(20),
-    paddingTop: mvs(40),
-  },
-  linkContainer: {
-    flex: 1,
-    alignItems: 'flex-start',
-    marginTop: mvs(36),
-    backgroundColor: colors.white,
-    width: width,
-    borderTopLeftRadius: mvs(15),
-    borderTopRightRadius: mvs(15),
+
+  img: {
+    height: mvs(120),
+    width: mvs(120),
+    borderRadius: mvs(70),
     alignSelf: 'center',
-    paddingTop: mvs(30),
-    paddingHorizontal: mvs(20),
-    // marginBottom: mvs(20),
+    marginTop: mvs(25),
+    backgroundColor: 'red',
+  },
+
+  imgUpload: {
+    height: mvs(120),
+    width: mvs(120),
+    borderRadius: mvs(50),
+    alignSelf: 'center',
+    marginTop: '20%',
+  },
+  inputcontainer: {
+    marginTop: mvs(120),
+    // padding:mvs(20)
   },
   name: {
     alignSelf: 'center',
     fontSize: mvs(24),
-    marginTop: mvs(10),
-    color: colors.white,
-  },
-  email: {
-    alignSelf: 'center',
-    fontSize: mvs(14),
-    color: `${colors.white}`,
-  },
-  item: {
-    marginBottom: mvs(15),
-  },
-  itemtabs: {
-    marginBottom: mvs(15),
-
-    flexDirection: 'row',
-    // borderWidth: 1,
+    // marginTop: mvs(10),
+    position: 'absolute',
+    bottom: mvs(-95),
     alignItems: 'center',
-    borderRadius: mvs(10),
-    padding: mvs(10),
+    // color: colors.white,
+  },
+  textinput: {
+    // widht:'90%',
+    // alignSelf:'center',
+    borderColor: colors.gray87,
+  },
+  containerStyle: {
+    height: mvs(50),
+  },
+  containerStyle2: {
+    height: mvs(50),
     backgroundColor: colors.white,
-    // justifyContent: 'space-between',
-    width: width - mvs(40),
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-
-    elevation: 2,
+    borderColor: colors.yellow,
+    borderWidth: mvs(2),
+    borderRadius: mvs(27),
   },
-  itemText: {
+  textStyle: {
+    color: colors.primary,
     fontSize: mvs(16),
-    color: `${colors.black}`,
   },
-  itemText1: {
-    fontSize: mvs(16),
-    color: `${colors.black}`,
-    marginLeft: mvs(10),
-  },
-  img: {
-    height: mvs(100),
-    width: mvs(100),
-    borderRadius: mvs(50),
-    borderWidth: mvs(3),
-    backgroundColor: colors.transparent,
-    justifyContent: 'center',
+  editbtn: {
+    backgroundColor: colors.lightsilver,
+    width: mvs(30),
+    height: mvs(30),
+    borderRadius: mvs(15),
+    position: 'absolute',
     alignItems: 'center',
-    alignSelf: 'center',
-  },
-  logouttab: {
-    flexDirection: 'row',
-    marginBottom: mvs(15),
-  },
-  imgUpload: {
-    height: mvs(100),
-    width: mvs(100),
-    borderRadius: mvs(50),
     justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
+    right: mvs(0),
+    top: mvs(80),
   },
 });
 export default styles;

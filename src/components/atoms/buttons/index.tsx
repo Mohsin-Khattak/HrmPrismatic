@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.primary,
     width: '100%',
-    height: mvs(40),
+    height: mvs(45),
     borderRadius: mvs(25),
   },
   iconContainer: {

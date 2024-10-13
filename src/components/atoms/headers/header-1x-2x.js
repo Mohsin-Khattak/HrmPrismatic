@@ -40,19 +40,7 @@ const HeaderX = ({
             />
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity
-            style={{
-              backgroundColor: colors.white,
-              padding: mvs(5),
-              borderRadius: mvs(7),
-            }}
-            onPress={() => navigation?.toggleDrawer()}>
-            <MaterialCommunityIcons
-              name={'menu'}
-              size={mvs(20)}
-              color={colors.black}
-            />
-          </TouchableOpacity>
+          <View></View>
         )}
 
         {title ? (

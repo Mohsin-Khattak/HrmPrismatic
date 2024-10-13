@@ -248,14 +248,13 @@ const PrimaryInput = (props: props) => {
           </TouchableOpacity>
         )}
         {editIcons && (
-            <FontAwesome
+          <FontAwesome
             style={styles.PasswordIcon}
-
-              name={'edit'}
-              size={24}
-              color={colors.primary}
-              // style={styles.icon}
-            />
+            name={'edit'}
+            size={24}
+            color={colors.primary}
+            // style={styles.icon}
+          />
         )}
       </View>
       <DatePicker

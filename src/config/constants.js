@@ -38,6 +38,7 @@ export const HomeList = [
   {
     image: IMG.fingerprintimg,
     title: 'Attendance',
+    moveTo: 'Attendance',
   },
   {
     image: IMG.leaveimg,

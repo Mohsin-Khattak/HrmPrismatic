@@ -4,7 +4,6 @@ import {colors} from 'config/colors';
 import * as React from 'react';
 import {StatusBar, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import EditProfileScreen from 'screens/edit-profile';
 import ForgotPasswordScreen from 'screens/forgot-password';
 import FurnitureItemsScreen from 'screens/furniture-items';
 import HelpUs from 'screens/help-us';
@@ -22,6 +21,7 @@ import OurServicesScreen from 'screens/our-services';
 import PrivacyPolicyScreen from 'screens/privacy-policy';
 import ResetPasswordScreen from 'screens/reset-password';
 import ServiceSelection from 'screens/selectionService';
+import SelfServicePortal from 'screens/self-service-portal';
 import ShoppingScreen from 'screens/shopping';
 import Splash from 'screens/splash';
 import TermsandConditionsScreen from 'screens/terms-and-conditions';
@@ -30,7 +30,7 @@ import Tracking from 'screens/tracking';
 import WhereToMoveScreen from 'screens/where-to-move';
 import {horizontalAnimation} from '../utils';
 import DrawerNavigation from './drawer-navigation/drawer-navigation';
-import SelfServicePortal from 'screens/self-service-portal';
+import Attendance from 'screens/attendance';
 const Stack = createNativeStackNavigator();
 
 export const RootNavigator = () => {
@@ -43,7 +43,7 @@ export const RootNavigator = () => {
         barStyle={'white'}
       />
       <Stack.Navigator
-        initialRouteName="EditProfileScreen"
+        initialRouteName="Drawer"
         screenOptions={horizontalAnimation}>
         <Stack.Group>
           <Stack.Screen name="Splash" component={Splash} />
@@ -59,6 +59,7 @@ export const RootNavigator = () => {
           />
           <Stack.Screen name="Notifications" component={Notifications} />
           <Stack.Screen name="LanguageScreen" component={LanguageScreen} />
+          <Stack.Screen name="Attendance" component={Attendance} />
           <Stack.Screen
             name="OurServicesScreen"
             component={OurServicesScreen}
@@ -73,10 +74,7 @@ export const RootNavigator = () => {
             name="TermsandConditionsScreen"
             component={TermsandConditionsScreen}
           />
-          <Stack.Screen
-            name="EditProfileScreen"
-            component={EditProfileScreen}
-          />
+
           <Stack.Screen
             name="MesssageHomeScreen"
             component={MesssageHomeScreen}
@@ -89,17 +87,14 @@ export const RootNavigator = () => {
             name="PrivacyPolicyScreen"
             component={PrivacyPolicyScreen}
           />
-
           <Stack.Screen
             name="OrderDetailsScreen"
             component={OrderDetailsScreen}
           />
-
           <Stack.Screen
             name="MessageHomeScreen"
             component={MessageHomeScreen}
           />
-
           <Stack.Screen name="ShoppingScreen" component={ShoppingScreen} />
           <Stack.Screen
             name="WhereToMoveScreen"
