@@ -587,11 +587,11 @@ const styles = StyleSheet.create({
   },
   areaContainer: {
     borderBottomWidth: mvs(0.7),
-    borderColor: colors.bluecolor,
+    borderColor: colors.border,
     height: mvs(90),
     // paddingTop: mvs(7),
     borderWidth: mvs(1),
-    borderRadius: mvs(20),
+    borderRadius: mvs(10),
     // borderRadius: mvs(10),
     flexDirection: 'row',
     justifyContent: 'space-between',

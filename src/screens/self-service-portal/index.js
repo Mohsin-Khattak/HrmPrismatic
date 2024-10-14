@@ -5,6 +5,7 @@ import styles from './styles';
 import SelfPortalCard from 'components/molecules/self-portal-card';
 import {mvs} from 'config/metrices';
 import {colors} from 'config/colors';
+import {navigate} from 'navigation/navigation-ref';
 const SelfServicePortal = props => {
   return (
     <View style={styles.container}>
@@ -14,32 +15,37 @@ const SelfServicePortal = props => {
           containerStyle={{backgroundColor: colors.homecard2}}
           title={'1.'}
           title1={'Leave Request'}
+          onPress={() => navigate('LeaveRequestList')}
         />
         <SelfPortalCard
+          onPress={() => navigate('WorkFromHomeRequestList')}
           containerStyle={{backgroundColor: colors.homecard1}}
           title={'2.'}
           title1={'Work From Home Request'}
         />
         <SelfPortalCard
+          onPress={() => navigate('AdvanceRequestList')}
           containerStyle={{backgroundColor: colors.homecard2}}
           title={'3.'}
-          title1={'Reimbursement Request'}
+          title1={'Advances'}
         />
         <SelfPortalCard
+          onPress={() => navigate('LoanRequestList')}
           containerStyle={{backgroundColor: colors.homecard1}}
           title={'4.'}
-          title1={'Attendance Correction'}
+          title1={'Loan'}
         />
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard2}}
           title={'5.'}
-          title1={'Advances'}
+          title1={'Reimbursement Request'}
         />
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard1}}
           title={'6.'}
-          title1={'Loan'}
+          title1={'Attendance Correction'}
         />
+
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard2}}
           title={'7.'}

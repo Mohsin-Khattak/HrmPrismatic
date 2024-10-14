@@ -37,3 +37,7 @@ export {default as PasswordChangedAnimation} from './PasswordChanged.json';
 export {default as OTPAnimation} from './OTP.json';
 export {default as CheckmarkAnimation} from './Checkmark.json';
 export {default as UploadDocumentsAnimation} from './UploadDocuments.json';
+
+///hrm//////////////
+export {default as Tick} from './hrm-icons/tick.svg';
+export {default as ClockIcon} from './hrm-icons/clock.svg';

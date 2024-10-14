@@ -77,7 +77,7 @@ const Attendance = props => {
             mainContainer={{width: '47%'}}
           />
         </Row>
-        <PrimaryButton containerStyle={styles.searchButton} title="Search" />
+        <PrimaryButton containerStyle={styles.searchButton} title="Filter" />
 
         <View style={styles.header}>
           <Bold style={styles.headerText} label={'Date'} />

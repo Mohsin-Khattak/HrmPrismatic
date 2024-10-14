@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
   label: {
     fontFamily: fonts.medium,
     fontSize: mvs(15),
-    color: colors.black, //default color
+    color: colors.primary, //default color
   },
 });
