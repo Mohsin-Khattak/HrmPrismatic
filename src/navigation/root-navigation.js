@@ -37,6 +37,10 @@ import AdvanceRequestList from 'screens/advance-request-list';
 import AdvanceRequest from 'screens/advance-request';
 import LoanRequestList from 'screens/loan-request-list';
 import LoanRequest from 'screens/loan-request';
+import ComplainRequestList from 'screens/complain-request-list';
+import ComplainRequest from 'screens/complain-request';
+import ResourceRequestList from 'screens/resource-request-list';
+import ResourceRequest from 'screens/resource-request';
 const Stack = createNativeStackNavigator();
 
 export const RootNavigator = () => {
@@ -71,6 +75,16 @@ export const RootNavigator = () => {
           <Stack.Screen name="AdvanceRequest" component={AdvanceRequest} />
           <Stack.Screen name="LoanRequestList" component={LoanRequestList} />
           <Stack.Screen name="LoanRequest" component={LoanRequest} />
+          <Stack.Screen name="ComplainRequest" component={ComplainRequest} />
+          <Stack.Screen name="ResourceRequest" component={ResourceRequest} />
+          <Stack.Screen
+            name="ResourceRequestList"
+            component={ResourceRequestList}
+          />
+          <Stack.Screen
+            name="ComplainRequestList"
+            component={ComplainRequestList}
+          />
           <Stack.Screen
             name="AdvanceRequestList"
             component={AdvanceRequestList}

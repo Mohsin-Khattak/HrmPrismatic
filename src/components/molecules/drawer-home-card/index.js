@@ -32,7 +32,7 @@ const DrawerHomeCard = ({
           )}
           <Medium
             label={label1}
-            fontSize={mvs(18)}
+            fontSize={mvs(14)}
             color={colors.black}
             style={{marginLeft: mvs(10)}}
           />
@@ -42,7 +42,7 @@ const DrawerHomeCard = ({
             {label2 && (
               <>
                 {icon2 && <Image source={icon2} style={styles.img} />}
-                <Medium label={label2} fontSize={mvs(15)} />
+                <Medium label={label2} fontSize={mvs(14)} />
               </>
             )}
           </Row>

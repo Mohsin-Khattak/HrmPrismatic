@@ -1,6 +1,6 @@
 import Header1x2x from 'components/atoms/headers/header-1x-2x';
 import React from 'react';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import styles from './styles';
 import SelfPortalCard from 'components/molecules/self-portal-card';
 import {mvs} from 'config/metrices';
@@ -10,7 +10,7 @@ const SelfServicePortal = props => {
   return (
     <View style={styles.container}>
       <Header1x2x back={true} title={'Self-Service Portal'} />
-      <View style={{paddingHorizontal: mvs(20)}}>
+      <ScrollView style={{paddingHorizontal: mvs(20)}}>
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard2}}
           title={'1.'}
@@ -36,32 +36,34 @@ const SelfServicePortal = props => {
           title1={'Loan'}
         />
         <SelfPortalCard
-          containerStyle={{backgroundColor: colors.homecard2}}
+          onPress={() => navigate('ComplainRequestList')}
+          containerStyle={{backgroundColor: colors.homecard1}}
           title={'5.'}
+          title1={'Complaints'}
+        />
+        <SelfPortalCard
+          onPress={() => navigate('ResourceRequestList')}
+          containerStyle={{backgroundColor: colors.homecard2}}
+          title={'6.'}
+          title1={'Resource Request'}
+        />
+        <SelfPortalCard
+          containerStyle={{backgroundColor: colors.homecard2}}
+          title={'7.'}
           title1={'Reimbursement Request'}
         />
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard1}}
-          title={'6.'}
+          title={'8.'}
           title1={'Attendance Correction'}
         />
 
         <SelfPortalCard
           containerStyle={{backgroundColor: colors.homecard2}}
-          title={'7.'}
+          title={'9.'}
           title1={'Event Calendar'}
         />
-        <SelfPortalCard
-          containerStyle={{backgroundColor: colors.homecard1}}
-          title={'8.'}
-          title1={'Complaints'}
-        />
-        <SelfPortalCard
-          containerStyle={{backgroundColor: colors.homecard2}}
-          title={'9.'}
-          title1={'Resource Request'}
-        />
-      </View>
+      </ScrollView>
     </View>
   );
 };
